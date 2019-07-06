@@ -120,6 +120,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
         
+        cell.commentButton.tag = indexPath.row
+        cell.commentButton.addTarget(self, action: Selector(("pushButton:")), for: .touchUpInside)
+        
         return cell
     }
     
@@ -158,6 +161,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             postRef.updateChildValues(likes)
             
         }
+    }
+    
+    @objc private func pushButton(_ sender:UIButton) {
+        let row = sender.tag
+        let storyboard: UIStoryboard = self.storyboard!
+        let commentInput = storyboard.instantiateViewController(withIdentifier: "commentInput") as! CommentViewController
+        commentInput.postArray = self.postArray
+        commentInput.row = row
+        self.present(commentInput, animated: true, completion: nil)        
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
 
     /*

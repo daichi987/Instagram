@@ -42,8 +42,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Ez-MHV">
-                        <rect key="frame" x="126" y="349.5" width="168" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eI-Ez-MHV">
+                        <rect key="frame" x="232" y="350" width="62" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -54,14 +54,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7b-tI-ZtY">
+                        <rect key="frame" x="126" y="340" width="80" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="riz-Fv-AAU"/>
+                        </constraints>
+                        <state key="normal" title="コメント" backgroundImage="btn"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="0eI-Ez-MHV" firstAttribute="leading" secondItem="p3e-Gw-7YP" secondAttribute="trailing" constant="10" id="00s-ae-1ac"/>
                     <constraint firstAttribute="trailingMargin" secondItem="0eI-Ez-MHV" secondAttribute="trailing" constant="10" id="1pO-fs-DLg"/>
                     <constraint firstItem="OkG-4Q-Ggp" firstAttribute="top" secondItem="FBC-ik-IR5" secondAttribute="bottom" constant="10" id="2XN-5D-dch"/>
                     <constraint firstAttribute="bottomMargin" secondItem="OkG-4Q-Ggp" secondAttribute="bottom" constant="10" id="4kn-eV-TWQ"/>
+                    <constraint firstItem="Y7b-tI-ZtY" firstAttribute="leading" secondItem="p3e-Gw-7YP" secondAttribute="trailing" constant="10" id="GVh-5x-Uv4"/>
+                    <constraint firstItem="Y7b-tI-ZtY" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="Hae-sZ-x8V"/>
                     <constraint firstItem="FBC-ik-IR5" firstAttribute="top" secondItem="T2Z-t9-I4H" secondAttribute="bottom" constant="10" id="IIE-CJ-agH"/>
+                    <constraint firstItem="0eI-Ez-MHV" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="Jom-Mc-Mgd"/>
+                    <constraint firstItem="0eI-Ez-MHV" firstAttribute="leading" secondItem="Y7b-tI-ZtY" secondAttribute="trailing" constant="10" id="NKz-4S-XHG"/>
                     <constraint firstAttribute="trailing" secondItem="T2Z-t9-I4H" secondAttribute="trailing" id="UIX-Us-MTK"/>
+                    <constraint firstItem="p3e-Gw-7YP" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="UaZ-yp-weS"/>
                     <constraint firstItem="T2Z-t9-I4H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Va4-uY-EK0"/>
                     <constraint firstItem="OkG-4Q-Ggp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="aJp-og-89T"/>
                     <constraint firstItem="FBC-ik-IR5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ebY-dH-bxA"/>
@@ -75,6 +86,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="OkG-4Q-Ggp" id="fEl-n2-gMr"/>
+                <outlet property="commentButton" destination="Y7b-tI-ZtY" id="4J5-Sx-BKw"/>
                 <outlet property="dateLabel" destination="0eI-Ez-MHV" id="uDH-dB-Ib6"/>
                 <outlet property="likeButton" destination="FBC-ik-IR5" id="Z5h-mJ-RTV"/>
                 <outlet property="likeLabel" destination="p3e-Gw-7YP" id="kMn-2o-kUZ"/>
@@ -84,6 +96,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="btn" width="300" height="40"/>
         <image name="like_none" width="40" height="40"/>
     </resources>
 </document>
