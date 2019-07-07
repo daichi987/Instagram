@@ -123,6 +123,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.commentButton.tag = indexPath.row
         cell.commentButton.addTarget(self, action: Selector(("pushButton:")), for: .touchUpInside)
         
+        cell.commentTableView.reloadData()
+        
         return cell
     }
     

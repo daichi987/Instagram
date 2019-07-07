@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="566" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="566"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="712" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="712"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="565.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="711.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T2Z-t9-I4H">
@@ -49,7 +49,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkG-4Q-Ggp">
-                        <rect key="frame" x="26" y="390" width="268" height="121"/>
+                        <rect key="frame" x="26" y="390" width="268" height="141.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -61,16 +61,24 @@
                         </constraints>
                         <state key="normal" title="コメント" backgroundImage="btn"/>
                     </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tMI-TF-grb">
+                        <rect key="frame" x="10" y="541.5" width="300" height="160"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="160" id="AUu-FV-e21"/>
+                        </constraints>
+                    </tableView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="0eI-Ez-MHV" secondAttribute="trailing" constant="10" id="1pO-fs-DLg"/>
                     <constraint firstItem="OkG-4Q-Ggp" firstAttribute="top" secondItem="FBC-ik-IR5" secondAttribute="bottom" constant="10" id="2XN-5D-dch"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="OkG-4Q-Ggp" secondAttribute="bottom" constant="10" id="4kn-eV-TWQ"/>
                     <constraint firstItem="Y7b-tI-ZtY" firstAttribute="leading" secondItem="p3e-Gw-7YP" secondAttribute="trailing" constant="10" id="GVh-5x-Uv4"/>
                     <constraint firstItem="Y7b-tI-ZtY" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="Hae-sZ-x8V"/>
                     <constraint firstItem="FBC-ik-IR5" firstAttribute="top" secondItem="T2Z-t9-I4H" secondAttribute="bottom" constant="10" id="IIE-CJ-agH"/>
+                    <constraint firstAttribute="trailing" secondItem="tMI-TF-grb" secondAttribute="trailing" constant="10" id="IIK-l8-cM1"/>
                     <constraint firstItem="0eI-Ez-MHV" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="Jom-Mc-Mgd"/>
                     <constraint firstItem="0eI-Ez-MHV" firstAttribute="leading" secondItem="Y7b-tI-ZtY" secondAttribute="trailing" constant="10" id="NKz-4S-XHG"/>
+                    <constraint firstAttribute="bottom" secondItem="tMI-TF-grb" secondAttribute="bottom" constant="10" id="OFn-KE-0cd"/>
                     <constraint firstAttribute="trailing" secondItem="T2Z-t9-I4H" secondAttribute="trailing" id="UIX-Us-MTK"/>
                     <constraint firstItem="p3e-Gw-7YP" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="UaZ-yp-weS"/>
                     <constraint firstItem="T2Z-t9-I4H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Va4-uY-EK0"/>
@@ -81,18 +89,21 @@
                     <constraint firstItem="p3e-Gw-7YP" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="tCa-Eu-hCM"/>
                     <constraint firstItem="T2Z-t9-I4H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uWN-pQ-iRj"/>
                     <constraint firstItem="0eI-Ez-MHV" firstAttribute="centerY" secondItem="FBC-ik-IR5" secondAttribute="centerY" id="wqZ-bL-Y39"/>
+                    <constraint firstItem="tMI-TF-grb" firstAttribute="top" secondItem="OkG-4Q-Ggp" secondAttribute="bottom" constant="10" id="xHW-0D-Nxo"/>
+                    <constraint firstItem="tMI-TF-grb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ymD-Yl-zSz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="OkG-4Q-Ggp" id="fEl-n2-gMr"/>
                 <outlet property="commentButton" destination="Y7b-tI-ZtY" id="4J5-Sx-BKw"/>
+                <outlet property="commentTableView" destination="tMI-TF-grb" id="yNd-EJ-83j"/>
                 <outlet property="dateLabel" destination="0eI-Ez-MHV" id="uDH-dB-Ib6"/>
                 <outlet property="likeButton" destination="FBC-ik-IR5" id="Z5h-mJ-RTV"/>
                 <outlet property="likeLabel" destination="p3e-Gw-7YP" id="kMn-2o-kUZ"/>
                 <outlet property="postImageView" destination="T2Z-t9-I4H" id="7Xp-hW-vGz"/>
             </connections>
-            <point key="canvasLocation" x="128.98550724637681" y="107.14285714285714"/>
+            <point key="canvasLocation" x="128.98550724637681" y="155.35714285714286"/>
         </tableViewCell>
     </objects>
     <resources>

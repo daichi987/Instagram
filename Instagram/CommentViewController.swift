@@ -28,12 +28,12 @@ class CommentViewController: UIViewController {
                 return
             }
             
-            if let uid = Auth.auth().currentUser?.uid {
+            if let displayName = Auth.auth().currentUser?.displayName {
                 if postData.comments.count != 0 {
-                    postData.comments["uid"]!.append(uid)
+                    postData.comments["name"]!.append(displayName)
                     postData.comments["comment"]!.append(comment)
                 } else {
-                    postData.comments["uid"] = [uid]
+                    postData.comments["name"] = [displayName]
                     postData.comments["comment"] = [comment]
                 }
             }
@@ -45,6 +45,7 @@ class CommentViewController: UIViewController {
             
             // HUDで完了を知らせる
             SVProgressHUD.showSuccess(withStatus: "コメントを投稿しました")
+            dismiss(animated: true, completion: nil)
         }
         // キーボードを閉じる
         self.view.endEditing(true)
